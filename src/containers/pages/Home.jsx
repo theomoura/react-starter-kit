@@ -1,9 +1,15 @@
 import React from 'react';
-
-// import { Container } from './styles';
+import { useSelector } from 'react-redux';
 
 const Home = () => {
-  return <div>Pagina Home</div>;
+  const user = useSelector((state) => state.loginReducer.userData);
+
+  return (
+    <div>
+      <div>Pagina Home</div>
+      <div>{user[0].name}</div>
+    </div>
+  );
 };
 
 export default Home;

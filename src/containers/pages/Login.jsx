@@ -1,30 +1,25 @@
-import React, { useContext, useEffect, useMemo } from 'react';
+import React, { useContext, useCallback } from 'react';
 import { useHistory } from 'react-router-dom';
 import { ThemeContext } from 'styled-components';
-import { callGetMethod } from '../../middleware/_axios';
-import useDevice from '../../hooks/useDevice';
+import { useDispatch } from 'react-redux';
+import { fetchUserData } from '../../redux/actions/loginAction';
 
 // import { Container } from './styles';
 
-const Login = (props) => {
+const Login = () => {
   const history = useHistory();
   const themeContext = useContext(ThemeContext);
-  const device = useDevice();
+  const dispatch = useDispatch();
 
   console.log('theme', themeContext);
 
-  useEffect(() => {
-    callGetMethod('https://jsonplaceholder.typicode.com/users').then(
-      (response) => {
-        console.log('response', response);
-      },
-    );
-  }, []);
-
-  console.log('device desktop?', device.desktop);
+  const fetchUsers = useCallback(() => dispatch(fetchUserData()), [dispatch]);
 
   const handleButtonLogin = () => {
-    history.push('/home');
+    dispatch(fetchUserData()).then(() => {
+      console.log('foi');
+      history.push('/home');
+    });
   };
 
   return (
