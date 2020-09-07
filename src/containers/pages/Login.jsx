@@ -17,7 +17,6 @@ const Login = () => {
 
   const handleButtonLogin = () => {
     dispatch(fetchUserData()).then(() => {
-      console.log('foi');
       history.push('/home');
     });
   };
