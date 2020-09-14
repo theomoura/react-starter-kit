@@ -13,7 +13,7 @@ const main = {
   colors: {
     primary: '#d82482',
     secondary: '#51beb9',
-    success: '#00d213',
+    success: '#009DF7',
     error: '#f8562c',
     warning: '#f8562c',
     info: '#909090',

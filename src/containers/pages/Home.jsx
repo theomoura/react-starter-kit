@@ -2,7 +2,7 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 
 const Home = () => {
-  const user = useSelector((state) => state.loginReducer.userData);
+  const user = useSelector((state) => state.authReducer.userData);
 
   return (
     <div>
