@@ -1,6 +1,6 @@
 # Boilerplate for ReactJS project development
 
-Simple React Starter kit project built with [Create React App](https://github.com/facebook/create-react-app).
+Simple React Starter project built with [Create React App](https://github.com/facebook/create-react-app).
 
 Sctructured with _atomic design_, _material UI_ and _redux_.
 
