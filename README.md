@@ -14,3 +14,28 @@ Below is some features that are already configured and ready to use:
 - Routing, using react-router-dom library.
 - MaterialUi library for faster development using Material Design (but feel free to use another UI framework).
 - Jest tests with React testing library.
+
+## Installation
+
+```bash
+$ yarn install
+```
+
+## App scripts
+
+```bash
+# run
+$ yarn start
+
+# build
+$ yarn build
+
+# eject from create-react-app
+$ yarn eject
+
+# unit tests
+$ yarn test
+
+# test coverage
+$ yarn test:cov
+```
